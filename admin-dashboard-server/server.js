@@ -27,9 +27,10 @@ app.use("/api/users", userRoutes);
 
 
 // Test route
-app.get("/", (req, res) => {
-  res.send("Admin Dashboard API running");
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API working" });
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
