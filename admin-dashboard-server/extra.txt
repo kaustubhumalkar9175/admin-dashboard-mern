@@ -1,0 +1,8 @@
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTIyYTlmMDYxOTY1NjcxZTY5YWU2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2Njk5MjYxMSwiZXhwIjoxNzY3MDc5MDExfQ.RQ16ZfLUqIwG_PEl3eZUNid01u0kFOUzTQluUSAQ_v0",
+    "user": {
+        "id": "69522a9f061965671e69ae63",
+        "name": "Admin User",
+        "role": "admin"
+    }
+}
