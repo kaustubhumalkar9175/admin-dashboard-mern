@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import DashboardLayout from "../layouts/DashboardLayout";
 import { fetchUsers } from "../api/users";
 
@@ -7,15 +7,15 @@ const Users = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const loadUsers = async () => {
-    const res = await fetchUsers({ page });
-    setUsers(res.data);
-    setTotalPages(res.pagination.totalPages);
-  };
+  const loadUsers = useCallback(async () => {
+  const res = await fetchUsers();
+  setUsers(res.data);
+}, []);
+
 
   useEffect(() => {
     loadUsers();
-  }, [page]);
+  }, [loadUsers]);
 
   return (
     <DashboardLayout>

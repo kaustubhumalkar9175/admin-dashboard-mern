@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 
@@ -92,11 +92,12 @@ const Records = () => {
   const [editingId, setEditingId] = useState(null);
 
   // Load records
-  const loadRecords = async () => {
-    const res = await fetchRecords({ page, search });
-    setRecords(res.data);
-    setTotalPages(res.pagination.totalPages);
-  };
+  const loadRecords = useCallback(async () => {
+  const res = await fetchRecords({ page, search });
+  setRecords(res.data);
+  setTotalPages(res.pagination.totalPages);
+}, [page, search]);
+
 
   useEffect(() => {
     loadRecords();
