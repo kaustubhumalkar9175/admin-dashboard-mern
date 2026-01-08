@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://admin-dashboard-mern-ju01.onrender.com/api",
+  baseURL: "http://localhost:5000/api",
 });
 
 // Attach token automatically
