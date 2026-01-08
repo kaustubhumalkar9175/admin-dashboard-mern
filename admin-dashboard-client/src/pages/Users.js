@@ -5,8 +5,7 @@ import { fetchUsers } from "../api/users";
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-
+  
   const loadUsers = useCallback(async () => {
   const res = await fetchUsers();
   setUsers(res.data);

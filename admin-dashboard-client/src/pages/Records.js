@@ -99,9 +99,11 @@ const Records = () => {
 }, [page, search]);
 
 
+
   useEffect(() => {
-    loadRecords();
-  }, [page, search]);
+  loadRecords();
+}, [loadRecords]);
+
 
   // Input change
   const handleChange = (e) => {
